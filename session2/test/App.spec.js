@@ -17,6 +17,14 @@ describe('App Class ' , () => {
 		const app4 = new App();
 		expect(app3.getState).to.equal(app4.getState)
 	})
+	it('sets state to an object', () => {
+		const expected= {};
+		const app45= new App();
+		app45.setState( expected );
+		const actual = typeof app45.getState()
+		const testExpected = 'object'
+		expect(testExpected).to.equal(actual)
+	})
 	it('sets a state', () => {
 		const newState = {};
 		const expected = newState;
